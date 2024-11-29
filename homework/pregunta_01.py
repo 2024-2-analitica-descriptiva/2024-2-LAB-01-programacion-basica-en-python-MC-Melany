@@ -14,3 +14,17 @@ def pregunta_01():
     214
 
     """
+    with open("files/input/data.csv","r") as file: #abriendo el archivo
+
+
+        for line in file: # iterar
+            columnas = line.strip().split("\t") 
+            suma += int(columnas[1]) #convertimos a enteros 
+
+    return suma # mostramos la suma
+
+    
+
+if __name__ == "__main__":
+    print(pregunta_01())
+

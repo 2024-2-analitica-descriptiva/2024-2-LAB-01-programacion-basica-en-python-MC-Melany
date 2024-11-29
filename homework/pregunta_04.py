@@ -26,3 +26,24 @@ def pregunta_04():
      ('12', 3)]
 
     """
+    with open("files/input/data.csv", "r") as file:  # Abriendo el archivo
+        Cmeses = {}  # Diccionario para almacenar el conteo por mes
+        
+        for linea in file:
+            columns = linea.strip().split("\t")  # Dividir línea en columnas
+        
+            if columns:
+                fecha = columns[2]  # Extraer la fecha de la columna 3
+                mes = fecha.split("-")[1]  # Obtener el mes (MM) de la fecha
+                
+                    # Incrementar el contador del mes
+                if mes in Cmeses:
+                       Cmeses[mes] += 1
+                else:
+                        Cmeses[mes] = 1
+
+          # Ordenar los resultados por mes y convertirlos a lista de tuplas
+        mesesN = sorted(Cmeses.items())
+    return mesesN 
+
+

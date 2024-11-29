@@ -26,3 +26,24 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
+    with open("files/input/data.csv", "r") as file:
+     valoresclave = {}
+     for linea in file:
+            columns = linea.strip().split("\t")  # Dividir la línea en columnas
+            if columns:
+              letras = columns[4]
+              valorE=  letras.split(",")
+
+              for elemento in valorE:
+                    clave, valor = elemento.split(":")  # Separar clave y valor
+                    valor = int(valor)  # Convertir el valor a entero
+ 
+
+                    if clave in valoresclave:
+                        valoresclave[clave].append(valor)
+                    else:
+                        valoresclave[clave] = [valor]
+
+     resultadovaloresclave = [(clave, min(valoresclave[clave]), max(valoresclave[clave])) for clave in sorted(valoresclave.keys())]
+
+    return resultadovaloresclave

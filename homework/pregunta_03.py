@@ -15,3 +15,24 @@ def pregunta_03():
     [('A', 53), ('B', 36), ('C', 27), ('D', 31), ('E', 67)]
 
     """
+
+    
+    with open("files/input/data.csv","r") as file: #abriendo el archivo
+          letrac = {}
+          
+          for line in file:
+            
+            columns = line.strip().split("\t")
+            if  columns:
+                letra = columns[0]
+                
+                valor = int(columns[1]) 
+            
+                # Incrementar el contador de la letra
+                if letra in letrac:
+                    letrac[letra] += valor
+                else:
+                    letrac[letra] = valor
+                    
+            Dupla = sorted(letrac.items())
+    return Dupla

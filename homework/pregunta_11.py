@@ -16,3 +16,23 @@ def pregunta_11():
 
 
     """
+    with open("files/input/data.csv", "r") as file:  
+        sumacolumnas = {}  
+
+        for linea in file:
+            columns = linea.strip().split("\t")  
+            if columns:  
+                letraC4 = columns[3]  
+                valorC2 = int(columns[1])  
+         
+                letras = letraC4.split(",")  
+               
+                for letra in letras:
+                    if letra in sumacolumnas:
+                        sumacolumnas[letra] += valorC2
+                    else:
+                        sumacolumnas[letra] = valorC2  
+        resultadosumacolumnas = dict(sorted(sumacolumnas.items()))
+        return resultadosumacolumnas
+    
+     

@@ -27,3 +27,17 @@ def pregunta_08():
      (9, ['A', 'B', 'C', 'E'])]
 
     """
+    with open("files/input/data.csv", "r") as file:
+      tuplas  = {}
+      for linea in file:
+          columns = linea.strip().split("\t")  # Dividir la línea en columnas
+          if columns:
+              letra = columns[0]
+              valor=  int(columns[1])
+
+              if valor in tuplas:
+                tuplas[valor].add(letra)
+              else:
+                tuplas[valor] = {letra}
+      resultadotuplas =  [(valor, sorted(list(letra))) for valor, letra in sorted(tuplas.items()) ]
+    return resultadotuplas
