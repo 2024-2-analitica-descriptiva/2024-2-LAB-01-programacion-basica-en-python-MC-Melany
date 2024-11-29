@@ -15,8 +15,8 @@ def pregunta_01():
 
     """
     with open("files/input/data.csv","r") as file: #abriendo el archivo
-
-
+        
+        suma=0
         for line in file: # iterar
             columnas = line.strip().split("\t") 
             suma += int(columnas[1]) #convertimos a enteros 
