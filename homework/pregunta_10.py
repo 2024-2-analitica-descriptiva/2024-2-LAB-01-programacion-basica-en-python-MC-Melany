@@ -28,7 +28,6 @@ def pregunta_10():
                 letra = columns[0] 
                 columna4 = columns[3]  
                 columna5 = columns[4]  
-
                 
                 Ccolumna4 = len(columna4.split(",")) if columna4 else 0
                 Ccolumna5 = len(columna5.split(",")) if columna5 else 0

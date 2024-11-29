@@ -29,8 +29,7 @@ def pregunta_12():
                 for item in valorC5.split(","): 
                     clave, valor = item.split(":")  
                     suma_valores += int(valor)  
-
-                
+               
                 if letraC1 in sumacolumna:
                     sumacolumna[letraC1] += suma_valores
                 else:
