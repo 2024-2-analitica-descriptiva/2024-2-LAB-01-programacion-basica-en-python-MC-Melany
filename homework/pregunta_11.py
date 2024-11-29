@@ -14,11 +14,9 @@ def pregunta_11():
     Rta/
     {'a': 122, 'b': 49, 'c': 91, 'd': 73, 'e': 86, 'f': 134, 'g': 35}
 
-
-    """
+    """   
     with open("files/input/data.csv", "r") as file:  
         sumacolumnas = {}  
-
         for linea in file:
             columns = linea.strip().split("\t")  
             if columns:  

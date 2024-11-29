@@ -26,7 +26,7 @@ def pregunta_08():
      (8, ['A', 'B', 'D', 'E']),
      (9, ['A', 'B', 'C', 'E'])]
 
-    """
+    """ 
     with open("files/input/data.csv", "r") as file:
       tuplas  = {}
       for linea in file:

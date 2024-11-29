@@ -19,7 +19,7 @@ def pregunta_10():
      ('E', 3, 3)]
 
 
-    """
+    """   
     with open("files/input/data.csv", "r") as file:
         resultado = []  
         for linea in file:

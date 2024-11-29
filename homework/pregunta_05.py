@@ -14,7 +14,7 @@ def pregunta_05():
     Rta/
     [('A', 9, 2), ('B', 9, 1), ('C', 9, 0), ('D', 8, 3), ('E', 9, 1)]
 
-    """
+    """   
     with open("files/input/data.csv","r") as file: #abriendo el archivo
           valorM = {}
           for linea in file:

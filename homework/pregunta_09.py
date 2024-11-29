@@ -23,7 +23,7 @@ def pregunta_09():
      'iii': 18,
      'jjj': 18}}
 
-    """
+    """   
     with open("files/input/data.csv", "r") as file:
       valoresclave = {}
       for linea in file:

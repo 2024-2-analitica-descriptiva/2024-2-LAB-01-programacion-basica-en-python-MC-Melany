@@ -14,12 +14,9 @@ def pregunta_03():
     Rta/
     [('A', 53), ('B', 36), ('C', 27), ('D', 31), ('E', 67)]
 
-    """
-
-    
+    """  
     with open("files/input/data.csv","r") as file: #abriendo el archivo
           letrac = {}
-          
           for line in file:
             
             columns = line.strip().split("\t")

@@ -25,7 +25,7 @@ def pregunta_06():
      ('iii', 0, 9),
      ('jjj', 5, 17)]
 
-    """
+    """   
     with open("files/input/data.csv", "r") as file:
      valoresclave = {}
      for linea in file:
